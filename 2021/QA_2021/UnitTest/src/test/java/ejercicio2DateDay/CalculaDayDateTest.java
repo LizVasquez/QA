@@ -43,6 +43,8 @@ public class CalculaDayDateTest {
         objects.add(new Object[]{2,"jajaja",1600,23,10,00,"Mes invalido"});
         objects.add(new Object[]{28,"julio",-1,18,45,32,"Año invalido"});
         objects.add(new Object[]{18,"marzo",2010,19,75,00,"Minuto invalido"});
+        objects.add(new Object[]{2,"marte",1500,23,15,00,"Mes invalido"});
+
 
 
         return objects;
