@@ -3,7 +3,8 @@ package calculadoraTest;
 import calculadora.Calculadora;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 public class SumaTest {
     Calculadora cal;

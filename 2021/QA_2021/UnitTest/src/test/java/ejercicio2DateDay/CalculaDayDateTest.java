@@ -33,8 +33,10 @@ public class CalculaDayDateTest {
     public static Iterable<Object[]> getData(){
         List<Object[]> objects = new ArrayList<>();
 
-        objects.add(new Object[]{15,"abril",2000,13,00,00,"16 abril 2000 13:00:01"});
-        objects.add(new Object[]{31,"diciembre",2020,23,59,59,"1 enero 2020 00:00:00"});
+        objects.add(new Object[]{15,"abril",2000,23,50,45,"15 abril 2000 23:50:46"});
+        objects.add(new Object[]{31,"diciembre",2020,23,59,59,"1 enero 2021 00:00:00"});
+        objects.add(new Object[]{31,"diciembre",2020,13,59,59,"31 diciembre 2020 14:00:00"});
+        objects.add(new Object[]{31,"diciembre",2020,01,31,59,"31 diciembre 2020 01:32:00"});
         objects.add(new Object[]{28,"febrero",2021,23,59,59,"1 marzo 2021 00:00:00"});
         objects.add(new Object[]{28,"febrero",2020,23,59,59,"29 febrero 2020 00:00:00"});
         //----
@@ -44,14 +46,23 @@ public class CalculaDayDateTest {
         objects.add(new Object[]{2,"jajaja",1600,23,10,00,"Mes invalido"});
         objects.add(new Object[]{2,"marte",1500,23,15,00,"Mes invalido"});
         //----------
-        objects.add(new Object[]{28,"julio",015,18,45,32,"Año invalido"});
+        objects.add(new Object[]{28,"julio",-1,18,00,00,"Año invalido"});
         //---------
-        objects.add(new Object[]{30,"octubre",2001,27,30,00,"Hora  invalida"});
-        objects.add(new Object[]{8,"enero",2020,35,30,00,"Hora  invalida"});
+        objects.add(new Object[]{30,"octubre",2001,27,30,00,"Hora invalida"});
+        objects.add(new Object[]{8,"enero",2020,35,30,00,"Hora invalida"});
+        objects.add(new Object[]{31,"diciembre",2020,-1,59,59,"Hora invalida"});
+        objects.add(new Object[]{31,"diciembre",2020,24,59,59,"Hora invalida"});
         //----------MIN
         objects.add(new Object[]{18,"marzo",2010,19,75,00,"Minuto invalido"});
+        objects.add(new Object[]{31,"diciembre",2010,01,-1,59,"Minuto invalido"});
+        objects.add(new Object[]{31,"diciembre",2010,01,60,59,"Minuto invalido"});
+
         //--------SEC
         objects.add(new Object[]{24,"junio",1999,15,30,65,"Segundo invalido"});
+        objects.add(new Object[]{31,"diciembre",2010,01,65,00,"Segundo invalido"});
+        objects.add(new Object[]{31,"diciembre",2010,01,01,60,"Segundo invalido"});
+        objects.add(new Object[]{31,"diciembre",2010,01,01,-1,"Segundo invalido"});
+
 
         return objects;
 
@@ -60,8 +71,8 @@ public class CalculaDayDateTest {
     @Test
     public void verify_day_date(){
         CalculaDayDate calculaDayDate = new CalculaDayDate();
-        //String actualResult = calculaDayDate.resultado(this.day, this.month, this.year,this.hour, this.minute, this.second);
-        //Assert.assertEquals("Invalido", this.expectedResult, actualResult);
+        String actualResult = calculaDayDate.resultado(this.day, this.month, this.year,this.hour, this.minute, this.second);
+        Assert.assertEquals("Invalido", this.expectedResult, actualResult);
 
 
     }

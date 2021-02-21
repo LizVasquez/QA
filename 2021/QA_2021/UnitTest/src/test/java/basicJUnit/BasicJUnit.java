@@ -1,8 +1,7 @@
 package basicJUnit;
 
 import org.junit.*;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
+
 
 
 public class BasicJUnit {
