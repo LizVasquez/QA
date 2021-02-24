@@ -1,34 +1,42 @@
-package ejercicio4Test;
+package ejercicio4TestEstatico;
+
+import Ejercicio4Estatico.Cajero2;
 
 import ejercicio4.BDUtil;
-import ejercicio4.Cajero;
+
 import ejercicio4.ClientDB;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
+import org.powermock.api.mockito.PowerMockito;
+import org.powermock.core.classloader.annotations.PrepareForTest;
+import org.powermock.modules.junit4.PowerMockRunner;
+import org.powermock.modules.junit4.PowerMockRunnerDelegate;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@RunWith(value= Parameterized.class)
-public class CajeroTest {
+@RunWith(PowerMockRunner.class)
+@PowerMockRunnerDelegate(Parameterized.class)
+@PrepareForTest({BDUtil.class,ClientDB.class})
+
+public class Cajero2TestEstatico {
+    @Parameterized.Parameter(0)
     private boolean conexion;
+    @Parameterized.Parameter(1)
     private int ci;
+    @Parameterized.Parameter(2)
     private int saldo;
+    @Parameterized.Parameter(3)
     private int amount;
+    @Parameterized.Parameter(4)
     private boolean actualizacionMock;
+    @Parameterized.Parameter(5)
     private String expectedResult;
 
-    public CajeroTest(boolean conexion,int ci, int saldo,int amount, boolean actualizacionMock, String expectedResult){
-        this.conexion=conexion;
-        this.ci=ci;
-        this.saldo = saldo;
-        this.amount=amount;
-        this.actualizacionMock=actualizacionMock;
-        this.expectedResult=expectedResult;
-    }
+
     @Parameterized.Parameters
     public static Iterable<Object[]> getData(){
         List<Object[]> objects= new ArrayList<>();
@@ -48,24 +56,21 @@ public class CajeroTest {
 
         objects.add(new Object[]{true,101010,10000,11000,true,"Usted no tiene suficiente saldo"});
 
-         return objects;
+        return objects;
 
     }
 
-    BDUtil dbUtilMocked= Mockito.mock(BDUtil.class);
-    ClientDB clientDBMocked= Mockito.mock(ClientDB.class);
     @Test
     public void verify_calculate_cajero(){
         // Paso 3
-        Mockito.when(dbUtilMocked.updateSaldo(this.ci,this.saldo-this.amount)).thenReturn(this.actualizacionMock);
-        Mockito.when(clientDBMocked.isConnectionSuccessfully("mysql")).thenReturn(this.conexion);
-
+        PowerMockito.mockStatic(Ejercicio4Estatico.BDUtil.class);
+        PowerMockito.mockStatic(Ejercicio4Estatico.ClientDB.class);
+        
         // Paso 4
-        Cajero cajero= new Cajero(this.saldo,dbUtilMocked,clientDBMocked);
+        Mockito.when(Ejercicio4Estatico.BDUtil.updateSaldo(this.ci,this.saldo-this.amount)).thenReturn(this.actualizacionMock);
+        Mockito.when(Ejercicio4Estatico.ClientDB.isConnectionSuccessfully("mysql")).thenReturn(this.conexion);
+        Cajero2 cajero= new Cajero2();
         String actualResult= cajero.getCash(this.ci,this.amount);
         Assert.assertEquals("ERROR! ",this.expectedResult,actualResult);
     }
 }
-
-
-

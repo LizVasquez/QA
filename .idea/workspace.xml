@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57c682a0-e748-460f-8d9f-100b8741333b" name="Default Changelist" comment="report" />
+    <list default="true" id="57c682a0-e748-460f-8d9f-100b8741333b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4Estatico/BDUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4Estatico/Cajero2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4Estatico/ClientDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ejercicio4TestEstatico/Cajero2TestEstatico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ejercicio4Test/CajeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ejercicio4Test/CajeroTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +58,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1oahLwSeZAPOmjKIEnfCFfgCyVa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -60,6 +69,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../PrimerParcial" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -67,63 +77,39 @@
     <property name="settings.editor.selected.configurable" value="build.tools" />
     <property name="settings.editor.splitter.proportion" value="0.27666667" />
   </component>
-  <component name="RunManager" selected="JUnit.CajeroTest">
-    <configuration name="BasicJUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Ejercicio4Estatico" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.Cajero2TestEstatico.getData">
+    <configuration name="Cajero2TestEstatico" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTest.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="basicJUnit.*" />
+          <option name="PATTERN" value="ejercicio4TestEstatico.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="basicJUnit" />
-      <option name="MAIN_CLASS_NAME" value="basicJUnit.BasicJUnit" />
+      <option name="PACKAGE_NAME" value="ejercicio4TestEstatico" />
+      <option name="MAIN_CLASS_NAME" value="ejercicio4TestEstatico.Cajero2TestEstatico" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CajeroTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Cajero2TestEstatico.getData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTest.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ejercicio4Test.*" />
+          <option name="PATTERN" value="ejercicio4TestEstatico.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ejercicio4Test" />
-      <option name="MAIN_CLASS_NAME" value="ejercicio4Test.CajeroTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculaDayDateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UnitTest.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ejercicio2DateDay.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ejercicio2DateDay" />
-      <option name="MAIN_CLASS_NAME" value="ejercicio2DateDay.CalculaDayDateTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculadoraMockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UnitTest.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="calculadoraMockTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="calculadoraMockTest" />
-      <option name="MAIN_CLASS_NAME" value="calculadoraMockTest.CalculadoraMockTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ejercicio4TestEstatico" />
+      <option name="MAIN_CLASS_NAME" value="ejercicio4TestEstatico.Cajero2TestEstatico" />
+      <option name="METHOD_NAME" value="getData" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,13 +144,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CreditTest2.getData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnitTest.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ejercicio3Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ejercicio3Test" />
+      <option name="MAIN_CLASS_NAME" value="ejercicio3Test.CreditTest2" />
+      <option name="METHOD_NAME" value="getData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreditTest2.verify_calculate_credit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnitTest.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ejercicio3Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ejercicio3Test" />
+      <option name="MAIN_CLASS_NAME" value="ejercicio3Test.CreditTest2" />
+      <option name="METHOD_NAME" value="verify_calculate_credit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CajeroTest" />
+        <item itemvalue="JUnit.Cajero2TestEstatico.getData" />
+        <item itemvalue="JUnit.Cajero2TestEstatico" />
         <item itemvalue="JUnit.CreditTest2" />
-        <item itemvalue="JUnit.BasicJUnit" />
-        <item itemvalue="JUnit.CalculaDayDateTest" />
-        <item itemvalue="JUnit.CalculadoraMockTest" />
+        <item itemvalue="JUnit.CreditTest2.getData" />
+        <item itemvalue="JUnit.CreditTest2.verify_calculate_credit" />
       </list>
     </recent_temporary>
   </component>
