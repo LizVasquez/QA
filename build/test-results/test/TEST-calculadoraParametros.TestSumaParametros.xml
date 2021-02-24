@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="calculadoraParametros.TestSumaParametros" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-02-22T11:44:21" hostname="DESKTOP-7KR2S77" time="0.008">
+  <properties/>
+  <testcase name="verify_suma_all_values[0]" classname="calculadoraParametros.TestSumaParametros" time="0.001"/>
+  <testcase name="verify_suma_all_values[1]" classname="calculadoraParametros.TestSumaParametros" time="0.001"/>
+  <testcase name="verify_suma_all_values[2]" classname="calculadoraParametros.TestSumaParametros" time="0.0"/>
+  <testcase name="verify_suma_all_values[3]" classname="calculadoraParametros.TestSumaParametros" time="0.0"/>
+  <testcase name="verify_suma_all_values[4]" classname="calculadoraParametros.TestSumaParametros" time="0.0"/>
+  <testcase name="verify_suma_all_values[5]" classname="calculadoraParametros.TestSumaParametros" time="0.0"/>
+  <testcase name="verify_suma_all_values[6]" classname="calculadoraParametros.TestSumaParametros" time="0.0"/>
+  <testcase name="verify_suma_all_values[7]" classname="calculadoraParametros.TestSumaParametros" time="0.0"/>
+  <testcase name="verify_suma_all_values[8]" classname="calculadoraParametros.TestSumaParametros" time="0.0"/>
+  <testcase name="verify_suma_all_values[9]" classname="calculadoraParametros.TestSumaParametros" time="0.001"/>
+  <testcase name="verify_suma_all_values[10]" classname="calculadoraParametros.TestSumaParametros" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

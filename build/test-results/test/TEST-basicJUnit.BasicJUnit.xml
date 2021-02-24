@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="basicJUnit.BasicJUnit" tests="4" skipped="1" failures="0" errors="0" timestamp="2021-02-22T11:44:21" hostname="DESKTOP-7KR2S77" time="0.008">
+  <properties/>
+  <testcase name="verify_some_thing" classname="basicJUnit.BasicJUnit" time="0.003"/>
+  <testcase name="verify_some_thing2" classname="basicJUnit.BasicJUnit" time="0.001"/>
+  <testcase name="verify_some_thing3" classname="basicJUnit.BasicJUnit" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="verify_some_thing4" classname="basicJUnit.BasicJUnit" time="0.002"/>
+  <system-out><![CDATA[---------> Before Class
+---------> Before
+LOGICA DEL TEST
+---------> After
+---------> Before
+LOGICA DEL TEST 2
+---------> After
+---------> Before
+LOGICA DEL TEST 4 -- velocidad del metodo
+---------> After
+---------> after Class
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

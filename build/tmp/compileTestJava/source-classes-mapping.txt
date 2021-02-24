@@ -1,0 +1,19 @@
+calculadoraPowerMockito/CalculadoraPowerMockitoTest.java
+ calculadoraPowerMockito.CalculadoraPowerMockitoTest
+ calculadoraPowerMockito.CalculadoraPowerMockitoTest$CalculadoraPowerMockTest
+calculadoraMockTest/CalculadoraMockTest.java
+ calculadoraMockTest.CalculadoraMockTest
+calculadoraTest/SumaTest.java
+ calculadoraTest.SumaTest
+basicJUnit/BasicJUnit.java
+ basicJUnit.BasicJUnit
+calculadoraTest/DivTest.java
+ calculadoraTest.DivTest
+calcularNotasTest/CalcularNotaParametros.java
+ calcularNotasTest.CalcularNotaParametros
+ejercicio2DateDay/CalculaDayDateTest.java
+ ejercicio2DateDay.CalculaDayDateTest
+calculadoraTestSuite/TestSuiteCalculadora.java
+ calculadoraTestSuite.TestSuiteCalculadora
+calculadoraParametros/TestSumaParametros.java
+ calculadoraParametros.TestSumaParametros

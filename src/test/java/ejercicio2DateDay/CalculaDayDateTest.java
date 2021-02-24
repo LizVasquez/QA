@@ -1,0 +1,100 @@
+package ejercicio2DateDay;
+
+import ejercicio2Tarea.CalculaDayDate;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@RunWith(value = Parameterized.class)
+public class CalculaDayDateTest {
+    private int day;
+    private String month;
+    private int year;
+    private int hour;
+    private int minute;
+    private int second;
+    private String expectedResult;
+
+    public CalculaDayDateTest(int day, String month, int year, int hour, int minute, int second, String expectedResult) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+        this.expectedResult = expectedResult;
+    }
+
+    @Parameterized.Parameters
+    public static Iterable<Object[]> getData(){
+        List<Object[]> objects = new ArrayList<>();
+
+        objects.add(new Object[]{15,"abril",2000,23,50,45,"15 abril 2000 23:50:46"});
+        objects.add(new Object[]{1,"enero",2020,23,59,59,"2 enero 2020 00:00:00"});
+        objects.add(new Object[]{1,"febrero",2020,23,59,59,"2 febrero 2020 00:00:00"});
+        objects.add(new Object[]{1,"marzo",2020,23,59,59,"2 marzo 2020 00:00:00"});
+        objects.add(new Object[]{1,"abril",2020,23,59,59,"2 abril 2020 00:00:00"});
+        objects.add(new Object[]{1,"mayo",2020,23,59,59,"2 mayo 2020 00:00:00"});
+        objects.add(new Object[]{1,"junio",2020,23,59,59,"2 junio 2020 00:00:00"});
+        objects.add(new Object[]{1,"julio",2020,23,59,59,"2 julio 2020 00:00:00"});
+        objects.add(new Object[]{1,"agosto",2020,23,59,59,"2 agosto 2020 00:00:00"});
+        objects.add(new Object[]{1,"septiembre",2020,23,59,59,"2 septiembre 2020 00:00:00"});
+        objects.add(new Object[]{1,"octubre",2020,23,59,59,"2 octubre 2020 00:00:00"});
+        objects.add(new Object[]{1,"noviembre",2020,23,59,59,"2 noviembre 2020 00:00:00"});
+        objects.add(new Object[]{31,"diciembre",2020,23,59,59,"1 enero 2021 00:00:00"});
+        objects.add(new Object[]{31,"diciembre",2020,13,59,59,"31 diciembre 2020 14:00:00"});
+        objects.add(new Object[]{31,"diciembre",2020,01,31,59,"31 diciembre 2020 01:32:00"});
+        objects.add(new Object[]{28,"febrero",2021,23,59,59,"1 marzo 2021 00:00:00"});
+        objects.add(new Object[]{28,"febrero",2020,23,59,59,"29 febrero 2020 00:00:00"});
+        //----
+        objects.add(new Object[]{32,"noviembre",2018,00,00,00,"Dia invalido"});
+        objects.add(new Object[]{-5,"mayo",2000,18,00,00,"Dia invalido"});
+        objects.add(new Object[]{20,"febrero",-1,23,59,59,"Dia invalido"});
+        //-------
+        objects.add(new Object[]{2,"jajaja",1600,23,10,00,"Mes invalido"});
+        objects.add(new Object[]{2,"marte",1500,23,15,00,"Mes invalido"});
+        objects.add(new Object[]{31,"Diciembres",2020,23,59,59,"Mes invalido"});
+        //----------
+        objects.add(new Object[]{20,"febrero",-1,23,59,59,"Año invalido"});
+        objects.add(new Object[]{28,"julio",-1,18,00,00,"Año invalido"});
+        //---------
+        objects.add(new Object[]{30,"octubre",2001,27,30,00,"Hora invalida"});
+        objects.add(new Object[]{8,"enero",2020,35,30,00,"Hora invalida"});
+        objects.add(new Object[]{31,"diciembre",2020,-1,59,59,"Hora invalida"});
+        objects.add(new Object[]{31,"diciembre",2020,24,59,59,"Hora invalida"});
+        //----------MIN
+        objects.add(new Object[]{18,"marzo",2010,19,75,00,"Minuto invalido"});
+        objects.add(new Object[]{31,"diciembre",2010,01,-1,59,"Minuto invalido"});
+        objects.add(new Object[]{31,"diciembre",2010,01,60,59,"Minuto invalido"});
+
+        //--------SEC
+        objects.add(new Object[]{24,"junio",1999,15,30,65,"Segundo invalido"});
+        objects.add(new Object[]{31,"diciembre",2010,01,65,00,"Segundo invalido"});
+        objects.add(new Object[]{31,"diciembre",2010,01,01,60,"Segundo invalido"});
+        objects.add(new Object[]{31,"diciembre",2010,01,01,-1,"Segundo invalido"});
+
+        //-----E
+        objects.add(new Object[]{31,"diciembre",2020,01,01,00,"31 diciembre 01:01:01"});
+        objects.add(new Object[]{31,"diciembre",2020,01,01,01,"31 diciembre 01:01:02"});
+        objects.add(new Object[]{31,"diciembre",2020,01,01,29,"31 diciembre 01:01:30"});
+        objects.add(new Object[]{31,"diciembre",2020,01,01,30,"31 diciembre 01:01:31"});
+        objects.add(new Object[]{31,"diciembre",2020,01,01,58,"31 diciembre 01:01:59"});
+
+
+        return objects;
+
+    }
+
+    @Test
+    public void verify_day_date(){
+        CalculaDayDate calculaDayDate = new CalculaDayDate();
+        String actualResult = calculaDayDate.resultado(this.day, this.month, this.year,this.hour, this.minute, this.second);
+        Assert.assertEquals("Invalido", this.expectedResult, actualResult);
+
+
+    }
+}
